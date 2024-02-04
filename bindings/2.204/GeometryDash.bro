@@ -10841,7 +10841,7 @@ class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate,
 	TodoReturn fullReset() = win 0x2e9f80;
 	float getCurrentPercent();
 	int getCurrentPercentInt() = win 0x2e6680;
-	TodoReturn getEndPosition();
+	cocos2d::CCPoint* getEndPosition(cocos2d::CCPoint*) = win 0x2ddb00;
 	TodoReturn getLastCheckpoint() = win 0x2e8d40;
 	TodoReturn getRelativeMod(cocos2d::CCPoint, float, float, float);
 	TodoReturn getRelativeModNew(cocos2d::CCPoint, float, float, bool, bool);
