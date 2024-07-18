@@ -283,8 +283,14 @@ GEODE_SIZE_CHECK(CreatorLayer, 0x1c0);
 GEODE_SIZE_CHECK(GJRotationControl, 0x1c8);
 GEODE_SIZE_CHECK(GJScaleControl, 0x210);
 GEODE_SIZE_CHECK(EditLevelLayer, 0x210);
+GEODE_SIZE_CHECK(LevelSelectLayer, 0x1d8);
 GEODE_SIZE_CHECK(BoomScrollLayer, 0x270);
 GEODE_SIZE_CHECK(ExtendedLayer, 0x1a0);
+GEODE_SIZE_CHECK(MultilineBitmapFont, 0x748);
+GEODE_SIZE_CHECK(FontObject, 0x4e8);
+GEODE_SIZE_CHECK(BitmapFontCache, 0x40);
+GEODE_SIZE_CHECK(SecretRewardsLayer, 0x238);
+GEODE_SIZE_CHECK(CurrencySprite, 0x2a8);
 
 GEODE_MEMBER_CHECK(EditorUI, m_transformState, 0x210);
 
@@ -338,4 +344,15 @@ GEODE_SIZE_CHECK(FMODAudioState, 0x380);
 GEODE_SIZE_CHECK(GroupCommandObject2, 0x208);
 
 GEODE_SIZE_CHECK(KeyframeObject, 0x1c0);
+
+GEODE_MEMBER_CHECK(GJShaderState, m_time, 0x80);
+GEODE_MEMBER_CHECK(GJShaderState, m_prevTime, 0x88);
+//GEODE_MEMBER_CHECK(GJShaderState, m_lensCircleTintR, 0x176);
+//GEODE_MEMBER_CHECK(GJShaderState, m_lensCircleTintG, 0x177);
+//GEODE_MEMBER_CHECK(GJShaderState, m_lensCircleTintB, 0x178);
+
+GEODE_MEMBER_CHECK(ShaderLayer, m_shader, 0x468);
+GEODE_MEMBER_CHECK(ShaderLayer, m_gameLayer, 0x490);
+GEODE_MEMBER_CHECK(ShaderLayer, m_splitYRangeMultUniform, 0x64c);
+
 #endif
