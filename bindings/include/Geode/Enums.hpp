@@ -182,6 +182,8 @@ enum class PlayerButton {
     Right = 3,
 };
 enum class GhostType {
+    Disabled = 0,
+    Enabled = 1,
 };
 enum class TableViewCellEditingStyle {
 };
@@ -885,4 +887,11 @@ enum class ShipStreak {
     ShipFire4 = 4,
     ShipFire5 = 5,
     ShipFire6 = 6,
+};
+
+// Geode Addition
+enum class GameOptionsSetting {
+    Off = -1,
+    Disabled = 0,
+    On = 1,
 };
