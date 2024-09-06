@@ -1,5 +1,8 @@
 #pragma once
 
+// Needed for GEODE_IS_MACOS
+#include <Geode/platform/cplatform.h>
+
 struct TodoReturnPlaceholder;
 using TodoReturn = TodoReturnPlaceholder;
 
@@ -86,6 +89,7 @@ enum class GameObjectType {
     GravityTogglePortal = 42,
     SpiderOrb = 43,
     SpiderPad = 44,
+    EnterEffectObject = 45,
     TeleportOrb = 46,
     AnimatedHazard = 47,
 };
@@ -356,7 +360,10 @@ enum class TouchTriggerControl {};
 enum class SmartPrefabResult {};
 enum class AudioSortType {};
 enum class spriteMode {};
-enum class GJAssetType {};
+enum class GJAssetType {
+    Song = 1,
+    SFX = 2
+};
 enum class CommentKeyType {
     Level = 0,
     User = 1,
@@ -703,6 +710,7 @@ enum class GJDifficulty {
 };
 
 enum class GJLevelType {
+    Default = 0,
     Local = 1,
     Editor = 2,
     Saved = 3
