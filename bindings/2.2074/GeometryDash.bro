@@ -12185,7 +12185,7 @@ class LevelCell : TableViewCell {
     // virtual ~LevelCell();
     LevelCell(char const*, float, float) = win 0xad870, imac 0x230090, m1 0x1e03b0;
 
-    static LevelCell* create(float, float) = imac 0x23caa0, m1 0x1ec704;
+    static LevelCell* create(float, float) = imac 0x23caa0, m1 0x1ec704, win 0x44b40;
 
     virtual bool init() = win 0xad920, imac 0x23cc50, m1 0x1ec890, ios 0x10edb8;
     virtual void draw() = win 0xb12e0, imac 0x240220, m1 0x1efb40, ios 0x111dd4;
