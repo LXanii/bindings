@@ -18194,7 +18194,7 @@ class RewardsPage : FLAlertLayer, FLAlertLayerProtocol, GJRewardDelegate {
     void unlockLayerClosed(RewardUnlockLayer* layer) = win inline, imac 0x20a000, m1 0x1becc4 {
         if (m_openLayer == layer) m_openLayer = nullptr;
     }
-    callback void updateTimers(float) = m1 0x1be2c4, ios 0x1c53ac;
+    callback void updateTimers(float) = m1 0x1be2c4, ios 0x1c53ac, win 0x3b6470;
 
     cocos2d::CCLabelBMFont* m_leftLabel;
     cocos2d::CCLabelBMFont* m_rightLabel;
