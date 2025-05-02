@@ -1172,7 +1172,7 @@ class cocos2d::CCAction : cocos2d::CCObject {
     void setTarget(cocos2d::CCNode*);
 
     // CCAction(cocos2d::CCAction const&);
-    CCAction() = m1 0x50f94c, imac 0x5dc9c0, ios 0x88938;
+    CCAction() = m1 0x50f94c, imac 0x5dc9c0, ios 0x264808;
     ~CCAction() = m1 0x50f9bc, imac 0x5dca60, ios 0x264848;
     char const* description() = imac 0x5dcb10, m1 0x50fa50;
 
@@ -1896,7 +1896,7 @@ class cocos2d::CCFileUtils : cocos2d::TypeInfo {
 
 [[link(win, android)]]
 class cocos2d::CCGLProgram : cocos2d::CCObject {
-    bool initWithVertexShaderByteArray(char const*, char const*) = imac 0x417e60, m1 0x393990, ios 0x1380ac;
+    bool initWithVertexShaderByteArray(char const*, char const*) = imac 0x417e60, m1 0x393990, ios 0x138260;
     bool initWithVertexShaderFilename(char const*, char const*) = m1 0x393a34, imac 0x417f00;
 
     unsigned int const getProgram();
@@ -4573,6 +4573,24 @@ class cocos2d::extension::CCScale9Sprite : cocos2d::CCNodeRGBA {
     	return nullptr;
     }
     static cocos2d::extension::CCScale9Sprite* create(char const*, cocos2d::CCRect) = imac 0x3e3810, m1 0x365afc, ios 0x216814;
+    static cocos2d::extension::CCScale9Sprite* create(char const* filename, cocos2d::CCRect rect, cocos2d::CCRect capInsets) = m1 0x3659d4, imac 0x3e3710, ios inline {
+        CCScale9Sprite* ret = new CCScale9Sprite;
+        if (ret->initWithFile(filename, rect, capInsets)) {
+            ret->autorelease();
+            return ret;
+        }
+        delete ret;
+        return nullptr;
+    }
+    static cocos2d::extension::CCScale9Sprite* create(cocos2d::CCRect capInsets, char const* filename) = m1 0x365c1c, imac 0x3e3900, ios inline {
+        CCScale9Sprite* ret = new CCScale9Sprite;
+        if (ret->initWithFile(capInsets, filename)) {
+            ret->autorelease();
+            return ret;
+        }
+        delete ret;
+        return nullptr;
+    }
 
     CCScale9Sprite() = m1 0x3642fc, imac 0x3e1e50, ios 0x2151f4;
     ~CCScale9Sprite() = m1 0x3643b0, imac 0x3e1f40, ios 0x215354;
